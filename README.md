@@ -8,12 +8,9 @@ It provides a consistent way to interact with data and enforce data integrity .
 
 Answer: Field filtering in MongoDB allows to specify which fields will include or exclude in the returned documents.The `projection` parameter in queries is controlling the fields that will be included or excluded. By specifying the fields to include or exclude,can reduce the amount of data showing .
 
-``
-db.books.find({})
+`db.books.find({})
 .projection({genre:1,price:1})
-.limit(100)
-
-``
+.limit(100)`
 
 Like in above query it will just show genre and price field from book collection fields.
 
@@ -25,15 +22,12 @@ Basically when need some custom functionalities base on any new use cases for do
 
 For example, can define an instance method called "totalPeople" that calculates the total people based on fields of a document. This method can be invoked on a specific document instance to perform the calculation.
 
-``
-totalPeople() {
+`totalPeople() {
 return this.people.reduce(
 (accumulator, currentValue) => accumulator + currentValue,
 initialValue
 );
-}
-
-``
+}`
 
 # Question 4: How do you use comparison operators like "$ne," "$gt," "$lt," "$gte," and "$lte" in MongoDB queries? Provide examples to illustrate their usage.
 
